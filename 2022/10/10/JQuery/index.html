@@ -1,0 +1,1078 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="TravonTi">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="jQuery第一节 jQuery概述1.1 jQuery简介jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“Write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TravonTi">
+<meta property="og:url" content="https://travonti.github.io/2022/10/10/JQuery/index.html">
+<meta property="og:site_name" content="TravonTi">
+<meta property="og:description" content="jQuery第一节 jQuery概述1.1 jQuery简介jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“Write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-10T03:08:16.739Z">
+<meta property="article:modified_time" content="2022-10-10T03:07:40.610Z">
+<meta property="article:author" content="TravonTi">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>TravonTi</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"travonti.github.io","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>TravonTi</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text=""></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-10-10 11:08" pubdate>
+          2022年10月10日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          18k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          154 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none"></h1>
+            
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2 分钟前
+                  
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h1><h4 id="第一节-jQuery概述"><a href="#第一节-jQuery概述" class="headerlink" title="第一节 jQuery概述"></a>第一节 jQuery概述</h4><h5 id="1-1-jQuery简介"><a href="#1-1-jQuery简介" class="headerlink" title="1.1 jQuery简介"></a>1.1 jQuery简介</h5><p>jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（<em>或JavaScript框架</em>）。jQuery设计的宗旨是“Write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
+<p>jQuery的核心特性可以总结为：具有独特的链式语法和短小清晰的多功能接口；具有高效灵活的css选择器，并且可对CSS选择器进行扩展；拥有便捷的插件扩展机制和丰富的插件。jQuery兼容各种主流浏览器，如IE 6.0+、FF 1.5+、Safari 2.0+、Opera 9.0+等。</p>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs llvm">目前jQuery有三个大版本：<br><span class="hljs-number">1</span>.<span class="hljs-keyword">x</span>：兼容ie<span class="hljs-number">678</span><span class="hljs-punctuation">,</span>使用最为广泛的，官方只做BUG维护，功能不再新增。因此一般项目来说，使用<span class="hljs-number">1</span>.<span class="hljs-keyword">x</span>版本就可以了，最终版本：<span class="hljs-number">1.12</span>.<span class="hljs-number">4</span> (<span class="hljs-number">2016</span>年<span class="hljs-number">5</span>月<span class="hljs-number">20</span>日)<br><span class="hljs-number">2</span>.<span class="hljs-keyword">x</span>：不兼容ie<span class="hljs-number">678</span>，很少有人使用，官方只做BUG维护，功能不再新增。如果不考虑兼容低版本的浏览器可以使用<span class="hljs-number">2</span>.<span class="hljs-keyword">x</span>，最终版本：<span class="hljs-number">2.2</span>.<span class="hljs-number">4</span> (<span class="hljs-number">2016</span>年<span class="hljs-number">5</span>月<span class="hljs-number">20</span>日)<br><span class="hljs-number">3</span>.<span class="hljs-keyword">x</span>：不兼容ie<span class="hljs-number">678</span>，只支持最新的浏览器。除非特殊要求，一般不会使用<span class="hljs-number">3</span>.<span class="hljs-keyword">x</span>版本的，很多老的jQuery插件不支持这个版本。目前该版本是官方主要更新维护的版本。最新版本：<span class="hljs-number">3.2</span>.<span class="hljs-number">1</span>（<span class="hljs-number">2017</span>年<span class="hljs-number">3</span>月<span class="hljs-number">20</span>日）<br><span class="hljs-number">1</span>.X大版本下，细分版本非常多，各个版本的函数都会有一定的差异。网上看到的很多教程大多是<span class="hljs-number">1</span>.<span class="hljs-keyword">x</span>版本的。jquery官方手册：http://api.jquery.com/<br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="1-2-什么是jQuery？"><a href="#1-2-什么是jQuery？" class="headerlink" title="1.2 什么是jQuery？"></a>1.2 什么是jQuery？</h5><p>jQuery是一个JavaScript函数库。<br>jQuery是一个轻量级的”写的少，做的多”的JavaScript库。<br>jQuery库包含以下功能：</p>
+<ul>
+<li>HTML 元素选取</li>
+<li>HTML 元素操作</li>
+<li>CSS 操作</li>
+<li>HTML 事件函数</li>
+<li>JavaScript 特效和动画</li>
+<li>HTML DOM 遍历和修改</li>
+<li>AJAX</li>
+<li>Utilities</li>
+</ul>
+<h5 id="1-3-为什么要用jQuery"><a href="#1-3-为什么要用jQuery" class="headerlink" title="1.3 为什么要用jQuery"></a>1.3 为什么要用jQuery</h5><p>目前网络上有大量开源的 JS 框架, 但是 jQuery 是目前最流行的 JS 框架，而且提供了大量的扩展。<br>很多大公司都在使用 jQuery， 例如:</p>
+<ul>
+<li>Google</li>
+<li>Microsoft</li>
+<li>IBM</li>
+<li>Netflix</li>
+</ul>
+<h4 id="第二节-jQuery安装"><a href="#第二节-jQuery安装" class="headerlink" title="第二节 jQuery安装"></a>第二节 jQuery安装</h4><h5 id="2-1-网页中添加-jQuery"><a href="#2-1-网页中添加-jQuery" class="headerlink" title="2.1 网页中添加 jQuery"></a>2.1 网页中添加 jQuery</h5><p>可以通过多种方法在网页中添加 jQuery。 您可以使用以下方法：</p>
+<ul>
+<li>从 <a target="_blank" rel="noopener" href="http://jquery.com/download/">jquery.com</a> 下载 jQuery 库</li>
+<li>从 CDN 中载入 jQuery, 如从 Google 中加载 jQuery<br>有两个版本的 jQuery 可供下载：</li>
+<li>Production version - 用于实际的网站中，已被精简和压缩。</li>
+<li>Development version - 用于测试和开发（未压缩，是可读的代码）<br>以上两个版本都可以从 <a target="_blank" rel="noopener" href="http://jquery.com/download/">jquery.com</a> 中下载。<br>jQuery 库是一个 JavaScript 文件，您可以使用 HTML 的 <script> 标签引用它：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;jquery-1.10.2.min.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br></code></pre></td></tr></table></figure>
+当然你也可以使用其它网站的CDN：</li>
+</ul>
+<h5 id="2-2-百度-CDN"><a href="#2-2-百度-CDN" class="headerlink" title="2.2 百度 CDN"></a>2.2 百度 CDN</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h5 id="2-3-新浪-CDN"><a href="#2-3-新浪-CDN" class="headerlink" title="2.3 新浪 CDN"></a>2.3 新浪 CDN</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h5 id="2-4-Google-CDN"><a href="#2-4-Google-CDN" class="headerlink" title="2.4 Google CDN"></a>2.4 Google CDN</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h5 id="2-5-Microsoft-CDN"><a href="#2-5-Microsoft-CDN" class="headerlink" title="2.5 Microsoft CDN"></a>2.5 Microsoft CDN</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://ajax.htmlnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<h4 id="第三节-jQuery语法"><a href="#第三节-jQuery语法" class="headerlink" title="第三节 jQuery语法"></a>第三节 jQuery语法</h4><p>jQuery 语法是通过选取 HTML 元素，并对选取的元素执行某些操作。<br>基础语法： <strong>$(selector).action()</strong></p>
+<ul>
+<li>美元符号定义 jQuery</li>
+<li>选择符（selector）"查询"和"查找" HTML 元素</li>
+<li>jQuery 的 action() 执行对元素的操作<br>实例:</li>
+<li>$(this).hide() - 隐藏当前元素</li>
+<li>$("p").hide() - 隐藏所有 <p> 元素</li>
+<li>$("p.test").hide() - 隐藏所有 class="test" 的 <p> 元素</li>
+<li>$("#test").hide() - 隐藏所有 id="test" 的元素</li>
+</ul>
+<h5 id="3-1-jQuery选择器"><a href="#3-1-jQuery选择器" class="headerlink" title="3.1 jQuery选择器"></a>3.1 jQuery选择器</h5><h6 id="3-1-1-元素选择器"><a href="#3-1-1-元素选择器" class="headerlink" title="3.1.1 元素选择器"></a>3.1.1 元素选择器</h6><p>jQuery 元素选择器基于元素名选取元素。<br>在页面中选取所有 <p> 元素:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    $(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">hide</span>();<br>  &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<h6 id="3-1-2-id选择器"><a href="#3-1-2-id选择器" class="headerlink" title="3.1.2 id选择器"></a>3.1.2 id选择器</h6><p>jQuery #id 选择器通过 HTML 元素的 id 属性选取指定的元素。<br>页面中元素的 id 应该是唯一的，所以您要在页面中选取唯一的元素需要通过 #id 选择器。<br>通过 id 选取元素语法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    $(<span class="hljs-string">&quot;#test&quot;</span>).<span class="hljs-title function_">hide</span>();<br>  &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h6 id="3-1-3-class选择器"><a href="#3-1-3-class选择器" class="headerlink" title="3.1.3 class选择器"></a>3.1.3 class选择器</h6><p>jQuery 类选择器可以通过指定的 class 查找元素。<br>语法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    $(<span class="hljs-string">&quot;.test&quot;</span>).<span class="hljs-title function_">hide</span>();<br>  &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h5 id="3-2-jQuery事件"><a href="#3-2-jQuery事件" class="headerlink" title="3.2 jQuery事件"></a>3.2 jQuery事件</h5><h6 id="3-2-1-什么是事件？"><a href="#3-2-1-什么是事件？" class="headerlink" title="3.2.1 什么是事件？"></a>3.2.1 什么是事件？</h6><p>页面对不同访问者的响应叫做事件。<br>事件处理程序指的是当 HTML 中发生某些事件时所调用的方法。<br>实例：</p>
+<ul>
+<li>在元素上移动鼠标。</li>
+<li>选取单选按钮</li>
+<li>点击元素<br>在事件中经常使用术语"触发"（或"激发"）例如： "当您按下按键时触发 keypress 事件"。<br>常见 DOM 事件：<table>
+<thead>
+<tr>
+<th>鼠标事件</th>
+<th>键盘事件</th>
+<th>表单事件</th>
+<th>文档/窗口事件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>click</td>
+<td>keypress</td>
+<td>submit</td>
+<td>load</td>
+</tr>
+<tr>
+<td>dblclick</td>
+<td>keydown</td>
+<td>change</td>
+<td>resize</td>
+</tr>
+<tr>
+<td>mouseover</td>
+<td>keyup</td>
+<td>focus</td>
+<td>scroll</td>
+</tr>
+<tr>
+<td>mouseout</td>
+<td></td>
+<td>blur</td>
+<td>unload</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h6 id="3-2-2-jQuery-事件方法语法"><a href="#3-2-2-jQuery-事件方法语法" class="headerlink" title="3.2.2 jQuery 事件方法语法"></a>3.2.2 jQuery 事件方法语法</h6><p>在 jQuery 中，大多数 DOM 事件都有一个等效的 jQuery 方法。<br>页面中指定一个点击事件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">click</span>();<br></code></pre></td></tr></table></figure>
+<p>下一步是定义触发事件。您可以通过一个事件函数实现：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-comment">// 动作触发后执行的代码!!</span><br>&#125;);<br></code></pre></td></tr></table></figure>
+<p>也就是说，不传参数是点击，传参数是设置事件。<br><strong>常用的 jQuery 事件方法</strong><br>$(document).ready() 方法允许我们在文档完全加载完后执行函数。该事件方法在 <a target="_blank" rel="noopener" href="http://www.runoob.com/jquery/jquery-syntax.html">jQuery 语法</a> 章节中已经提到过。<br><em><strong>click()</strong></em><br>当按钮点击事件被触发时会调用一个函数。<br>该函数在用户点击 HTML 元素时执行。<br>在下面的实例中，当点击事件在某个 <p> 元素上触发时，隐藏当前的 <p> 元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">hide</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>dblclick()</strong></em><br>当双击元素时，会发生 dblclick 事件。<br>dblclick() 方法触发 dblclick 事件，或规定当发生 dblclick 事件时运行的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">dblclick</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">hide</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>mouseover()</strong></em><br>当鼠标指针穿过元素时，会发生 mouseover 事件。<br>mouseover() 方法触发 mouseover 事件，或规定当发生 mouseover 事件时运行的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#p1&quot;</span>).<span class="hljs-title function_">mouseover</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-title function_">alert</span>(<span class="hljs-string">&#x27;您的鼠标移到了 id=&quot;p1&quot; 的元素上!&#x27;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>mouseout()</strong></em><br>当鼠标指针离开元素时，会发生 mouseout 事件。<br>mouseout() 方法触发 mouseout 事件，或规定当发生 mouseout 事件时运行的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#p1&quot;</span>).<span class="hljs-title function_">mouseout</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;再见，您的鼠标离开了该段落。&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>mousedown()</strong></em><br>当鼠标指针移动到元素上方，并按下鼠标按键时，会发生 mousedown 事件。<br>mousedown() 方法触发 mousedown 事件，或规定当发生 mousedown 事件时运行的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#p1&quot;</span>).<span class="hljs-title function_">mousedown</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;鼠标在该段落上按下！&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>mouseup()</strong></em><br>当在元素上松开鼠标按钮时，会发生 mouseup 事件。<br>mouseup() 方法触发 mouseup 事件，或规定当发生 mouseup 事件时运行的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#p1&quot;</span>).<span class="hljs-title function_">mouseup</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;鼠标在段落上松开。&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>hover()</strong></em><br>hover()方法用于模拟光标悬停事件。<br>当鼠标移动到元素上时，会触发指定的第一个函数(mouseenter);当鼠标移出这个元素时，会触发指定的第二个函数(mouseleave)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#p1&quot;</span>).<span class="hljs-title function_">hover</span>(<br>    <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>        <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;你进入了 p1!&quot;</span>);<br>    &#125;,<br>    <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>        <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;拜拜! 现在你离开了 p1!&quot;</span>);<br>    &#125;<br>);<br></code></pre></td></tr></table></figure>
+<p><em><strong>focus()</strong></em><br>当元素获得焦点时，发生 focus 事件。<br>当通过鼠标点击选中元素或通过 tab 键定位到元素时，该元素就会获得焦点。<br>focus() 方法触发 focus 事件，或规定当发生 focus 事件时运行的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;input&quot;</span>).<span class="hljs-title function_">focus</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;#cccccc&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>blur()</strong></em><br>当元素失去焦点时，发生 blur 事件。<br>blur() 方法触发 blur 事件，或规定当发生 blur 事件时运行的函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;input&quot;</span>).<span class="hljs-title function_">blur</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-variable language_">this</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;#ffffff&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<h4 id="第四节-jQuery效果"><a href="#第四节-jQuery效果" class="headerlink" title="第四节 jQuery效果"></a>第四节 jQuery效果</h4><h5 id="4-1-隐藏显示"><a href="#4-1-隐藏显示" class="headerlink" title="4.1 隐藏显示"></a>4.1 隐藏显示</h5><p><em><strong>hide()</strong></em><br>您可以使用 hide() 将元素隐藏</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#hide&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">hide</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>show()</strong></em><br>您可以使用show()将元素显示</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#show&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">show</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>toggle()</strong></em><br>通过 jQuery，您可以使用 toggle() 方法来切换 hide() 和 show() 方法。<br>显示被隐藏的元素，并隐藏已显示的元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">toggle</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p>事实上，这三种方法都是有两个参数的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(selector).<span class="hljs-title function_">hide</span>(speed,callback);<br>$(selector).<span class="hljs-title function_">show</span>(speed,callback);<br>$(selector).<span class="hljs-title function_">toggle</span>(speed,callback);<br></code></pre></td></tr></table></figure>
+<p>可选的 speed 参数规定隐藏/显示的速度，可以取以下值："slow"、"fast" 或毫秒。<br>可选的 callback 参数是隐藏或显示完成后所执行的函数名称。</p>
+<h5 id="4-2-淡入淡出"><a href="#4-2-淡入淡出" class="headerlink" title="4.2 淡入淡出"></a>4.2 淡入淡出</h5><p>通过 jQuery，您可以实现元素的淡入淡出效果。<br>jQuery 拥有下面四种 fade 方法：</p>
+<ul>
+<li>fadeIn()</li>
+<li>fadeOut()</li>
+<li>fadeToggle()</li>
+<li>fadeTo()</li>
+</ul>
+<p><em><strong>jQuery fadeIn() 方法</strong></em><br>jQuery fadeIn() 用于淡入已隐藏的元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(selector).<span class="hljs-title function_">fadeIn</span>(speed,callback);<br></code></pre></td></tr></table></figure>
+<p>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。.<br>可选的 callback 参数是 fading 完成后所执行的函数名称。<br>下面的例子演示了带有不同参数的 fadeIn() 方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;#div1&quot;</span>).<span class="hljs-title function_">fadeIn</span>();<br>  $(<span class="hljs-string">&quot;#div2&quot;</span>).<span class="hljs-title function_">fadeIn</span>(<span class="hljs-string">&quot;slow&quot;</span>);<br>  $(<span class="hljs-string">&quot;#div3&quot;</span>).<span class="hljs-title function_">fadeIn</span>(<span class="hljs-number">3000</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>jQuery fadeOut() 方法</strong></em><br>jQuery fadeOut() 方法用于淡出可见元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(selector).<span class="hljs-title function_">fadeOut</span>(speed,callback);<br></code></pre></td></tr></table></figure>
+<p>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。<br>可选的 callback 参数是 fading 完成后所执行的函数名称。<br>下面的例子演示了带有不同参数的 fadeOut() 方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;#div1&quot;</span>).<span class="hljs-title function_">fadeOut</span>();<br>  $(<span class="hljs-string">&quot;#div2&quot;</span>).<span class="hljs-title function_">fadeOut</span>(<span class="hljs-string">&quot;slow&quot;</span>);<br>  $(<span class="hljs-string">&quot;#div3&quot;</span>).<span class="hljs-title function_">fadeOut</span>(<span class="hljs-number">3000</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>jQuery fadeToggle() 方法</strong></em><br>jQuery fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。<br>如果元素已淡出，则 fadeToggle() 会向元素添加淡入效果。<br>如果元素已淡入，则 fadeToggle() 会向元素添加淡出效果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(selector).<span class="hljs-title function_">fadeToggle</span>(speed,callback);<br></code></pre></td></tr></table></figure>
+<p>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。<br>可选的 callback 参数是 fading 完成后所执行的函数名称。<br>下面的例子演示了带有不同参数的 fadeToggle() 方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;#div1&quot;</span>).<span class="hljs-title function_">fadeToggle</span>();<br>  $(<span class="hljs-string">&quot;#div2&quot;</span>).<span class="hljs-title function_">fadeToggle</span>(<span class="hljs-string">&quot;slow&quot;</span>);<br>  $(<span class="hljs-string">&quot;#div3&quot;</span>).<span class="hljs-title function_">fadeToggle</span>(<span class="hljs-number">3000</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<p><em><strong>jQuery fadeTo() 方法</strong></em><br>jQuery fadeTo() 方法允许渐变为给定的不透明度（值介于 0 与 1 之间）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(selector).<span class="hljs-title function_">fadeTo</span>(speed,opacity,callback);<br></code></pre></td></tr></table></figure>
+<p>必需的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。<br>fadeTo() 方法中必需的 opacity 参数将淡入淡出效果设置为给定的不透明度（值介于 0 与 1 之间）。<br>可选的 callback 参数是该函数完成后所执行的函数名称。<br>下面的例子演示了带有不同参数的 fadeTo() 方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;#div1&quot;</span>).<span class="hljs-title function_">fadeTo</span>(<span class="hljs-string">&quot;slow&quot;</span>,<span class="hljs-number">0.15</span>);<br>  $(<span class="hljs-string">&quot;#div2&quot;</span>).<span class="hljs-title function_">fadeTo</span>(<span class="hljs-string">&quot;slow&quot;</span>,<span class="hljs-number">0.4</span>);<br>  $(<span class="hljs-string">&quot;#div3&quot;</span>).<span class="hljs-title function_">fadeTo</span>(<span class="hljs-string">&quot;slow&quot;</span>,<span class="hljs-number">0.7</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+<h5 id="4-3-滑动"><a href="#4-3-滑动" class="headerlink" title="4.3 滑动"></a>4.3 滑动</h5><p>通过 jQuery，您可以在元素上创建滑动效果。<br>jQuery 拥有以下滑动方法：</p>
+<ul>
+<li>slideDown()</li>
+<li>slideUp()</li>
+<li>slideToggle()</li>
+</ul>
+<p><em><strong>slideDown() 方法</strong></em></p>
+<p>jQuery slideDown() 方法用于向下滑动元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(selector).<span class="hljs-title function_">slideDown</span>(speed,callback);<br></code></pre></td></tr></table></figure>
+
+<p>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。</p>
+<p>可选的 callback 参数是滑动完成后所执行的函数名称。</p>
+<p>下面的例子演示了 slideDown() 方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#flip&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;#panel&quot;</span>).<span class="hljs-title function_">slideDown</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p><em><strong>slideUp() 方法</strong></em></p>
+<p>jQuery slideUp() 方法用于向上滑动元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(selector).<span class="hljs-title function_">slideUp</span>(speed,callback);<br></code></pre></td></tr></table></figure>
+
+<p>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。</p>
+<p>可选的 callback 参数是滑动完成后所执行的函数名称。</p>
+<p>下面的例子演示了 slideUp() 方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#flip&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;#panel&quot;</span>).<span class="hljs-title function_">slideUp</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+
+
+<p><em><strong>slideToggle() 方法</strong></em></p>
+<p>jQuery slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换。</p>
+<p>如果元素向下滑动，则 slideToggle() 可向上滑动它们。</p>
+<p>如果元素向上滑动，则 slideToggle() 可向下滑动它们。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(selector).<span class="hljs-title function_">slideToggle</span>(speed,callback);<br></code></pre></td></tr></table></figure>
+
+<p>可选的 speed 参数规定效果的时长。它可以取以下值："slow"、"fast" 或毫秒。</p>
+<p>可选的 callback 参数是滑动完成后所执行的函数名称。</p>
+<p>下面的例子演示了 slideToggle() 方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#flip&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;#panel&quot;</span>).<span class="hljs-title function_">slideToggle</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h5 id="4-4-链式编程"><a href="#4-4-链式编程" class="headerlink" title="4.4 链式编程"></a>4.4 链式编程</h5><p>直到现在，我们都是一次写一条 jQuery 语句（一条接着另一条）。</p>
+<p>不过，有一种名为链接（chaining）的技术，允许我们在相同的元素上运行多条 jQuery 命令，一条接着另一条。</p>
+<p><strong>提示：</strong> 这样的话，浏览器就不必多次查找相同的元素。</p>
+<p>如需链接一个动作，您只需简单地把该动作追加到之前的动作上。</p>
+<p>下面的例子把 css()、slideUp() 和 slideDown() 链接在一起。"p1" 元素首先会变为红色，然后向上滑动，再然后向下滑动：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#p1&quot;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;color&quot;</span>,<span class="hljs-string">&quot;red&quot;</span>).<span class="hljs-title function_">slideUp</span>(<span class="hljs-number">2000</span>).<span class="hljs-title function_">slideDown</span>(<span class="hljs-number">2000</span>);<br></code></pre></td></tr></table></figure>
+
+<p>如果需要，我们也可以添加多个方法调用。</p>
+<p><strong>提示：</strong>当进行链接时，代码行会变得很差。不过，jQuery 语法不是很严格；您可以按照希望的格式来写，包含换行和缩进。</p>
+<p>如下书写也可以很好地运行：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#p1&quot;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;color&quot;</span>,<span class="hljs-string">&quot;red&quot;</span>)<br>  .<span class="hljs-title function_">slideUp</span>(<span class="hljs-number">2000</span>)<br>  .<span class="hljs-title function_">slideDown</span>(<span class="hljs-number">2000</span>);<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="第五节-jQuery-HTML"><a href="#第五节-jQuery-HTML" class="headerlink" title="第五节 jQuery HTML"></a>第五节 jQuery HTML</h4><h5 id="5-1-捕获"><a href="#5-1-捕获" class="headerlink" title="5.1 捕获"></a>5.1 捕获</h5><p>jQuery 拥有可操作 HTML 元素和属性的强大方法。</p>
+<p><em><strong>jQuery DOM 操作</strong></em></p>
+<p>jQuery 中非常重要的部分，就是操作 DOM 的能力。</p>
+<p>jQuery 提供一系列与 DOM 相关的方法，这使访问和操作元素和属性变得很容易。</p>
+<p><em><strong>获得内容 - text()、html() 以及 val()</strong></em></p>
+<p>三个简单实用的用于 DOM 操作的 jQuery 方法：</p>
+<ul>
+<li>text() - 设置或返回所选元素的文本内容---->innerText</li>
+<li>html() - 设置或返回所选元素的内容（包括 HTML 标记）---innerHTML</li>
+<li>val() - 设置或返回表单字段的值---value属性</li>
+</ul>
+<p>下面的例子演示如何通过 jQuery text() 和 html() 方法来获得内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#btn1&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;Text: &quot;</span> + $(<span class="hljs-string">&quot;#test&quot;</span>).<span class="hljs-title function_">text</span>());<br>&#125;);<br>$(<span class="hljs-string">&quot;#btn2&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;HTML: &quot;</span> + $(<span class="hljs-string">&quot;#test&quot;</span>).<span class="hljs-title function_">html</span>());<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>下面的例子演示如何通过 jQuery val() 方法获得输入字段的值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#btn1&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;值为: &quot;</span> + $(<span class="hljs-string">&quot;#test&quot;</span>).<span class="hljs-title function_">val</span>());<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>获取属性-attr()</p>
+<p>jQuery attr() 方法用于获取属性值。</p>
+<p>下面的例子演示如何获得链接中 href 属性的值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  <span class="hljs-title function_">alert</span>($(<span class="hljs-string">&quot;#a1&quot;</span>).<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;href&quot;</span>));<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h5 id="5-2-设置"><a href="#5-2-设置" class="headerlink" title="5.2 设置"></a>5.2 设置</h5><p><em><strong>设置内容 - text()、html() 以及 val()</strong></em></p>
+<p>我们将使用前一章中的三个相同的方法来设置内容：</p>
+<ul>
+<li>text() - 设置或返回所选元素的文本内容</li>
+<li>html() - 设置或返回所选元素的内容（包括 HTML 标记）</li>
+<li>val() - 设置或返回表单字段的值</li>
+</ul>
+<p>下面的例子演示如何通过 text()、html() 以及 val() 方法来设置内容：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#btn1&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    $(<span class="hljs-string">&quot;#test1&quot;</span>).<span class="hljs-title function_">text</span>(<span class="hljs-string">&quot;Hello world!&quot;</span>);<br>&#125;);<br>$(<span class="hljs-string">&quot;#btn2&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    $(<span class="hljs-string">&quot;#test2&quot;</span>).<span class="hljs-title function_">html</span>(<span class="hljs-string">&quot;&lt;b&gt;Hello world!&lt;/b&gt;&quot;</span>);<br>&#125;);<br>$(<span class="hljs-string">&quot;#btn3&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    $(<span class="hljs-string">&quot;#test3&quot;</span>).<span class="hljs-title function_">val</span>(<span class="hljs-string">&quot;Hello world!&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p><em><strong>text()、html() 以及 val() 的回调函数</strong></em></p>
+<p>上面的三个 jQuery 方法：text()、html() 以及 val()，同样拥有回调函数。回调函数有两个参数：被选元素列表中当前元素的下标，以及原始（旧的）值。然后以函数新值返回您希望使用的字符串。</p>
+<p>下面的例子演示带有回调函数的 text() 和 html()：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#btn1&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    $(<span class="hljs-string">&quot;#test1&quot;</span>).<span class="hljs-title function_">text</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">i,origText</span>)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;旧文本: &quot;</span> + origText + <span class="hljs-string">&quot; 新文本: Hello world! (index: &quot;</span> + i + <span class="hljs-string">&quot;)&quot;</span>; <br>    &#125;);<br>&#125;);<br> <br>$(<span class="hljs-string">&quot;#btn2&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>    $(<span class="hljs-string">&quot;#test2&quot;</span>).<span class="hljs-title function_">html</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">i,origText</span>)&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;旧 html: &quot;</span> + origText + <span class="hljs-string">&quot; 新 html: Hello &lt;b&gt;world!&lt;/b&gt; (index: &quot;</span> + i + <span class="hljs-string">&quot;)&quot;</span>; <br>    &#125;);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p><em><strong>设置属性 - attr()</strong></em></p>
+<p>jQuery attr() 方法也用于设置/改变属性值。</p>
+<p>下面的例子演示如何改变（设置）文本中 color属性的值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;#font1&quot;</span>).<span class="hljs-title function_">attr</span>(<span class="hljs-string">&quot;color&quot;</span>,<span class="hljs-string">&quot;red&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>案例 ：全选 |全不选</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&lt;!<span class="hljs-variable constant_">DOCTYPE</span> html&gt;<br>&lt;html&gt;<br>	&lt;head&gt;<br>		&lt;meta charset=&quot;UTF-8&quot;&gt;<br>		&lt;title&gt;全选全不选&lt;/title&gt;<br>		&lt;script src=&quot;js/jquery-1.11.0.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;<br>	&lt;/head&gt;<br>	&lt;body&gt;<br>		&lt;table border=&quot;1&quot; width=&quot;300&quot; height=&quot;200&quot;&gt;<br>			&lt;tr&gt;<br>				&lt;td&gt;&lt;input id=&quot;selectAll&quot; type=&quot;checkbox&quot;&gt;全选&lt;/td&gt;<br>				&lt;td&gt;编号&lt;/td&gt;<br>				&lt;td&gt;用户名&lt;/td&gt;<br>				&lt;td&gt;密码&lt;/td&gt;<br>			&lt;/tr&gt;<br>			&lt;tr&gt;<br>				&lt;td&gt;&lt;input type=&quot;checkbox&quot; class=&quot;sel&quot;&gt;&lt;/td&gt;<br>				&lt;td&gt;1&lt;/td&gt;<br>				&lt;td&gt;zhangsan&lt;/td&gt;<br>				&lt;td&gt;123&lt;/td&gt;<br>			&lt;/tr&gt;<br>			<br>			&lt;tr&gt;<br>				&lt;td&gt;&lt;input type=&quot;checkbox&quot; class=&quot;sel&quot;&gt;&lt;/td&gt;<br>				&lt;td&gt;2&lt;/td&gt;<br>				&lt;td&gt;lisi&lt;/td&gt;<br>				&lt;td&gt;123123&lt;/td&gt;<br>			&lt;/tr&gt;<br>			<br>			&lt;tr&gt;<br>				&lt;td&gt;&lt;input type=&quot;checkbox&quot; class=&quot;sel&quot;&gt;&lt;/td&gt;<br>				&lt;td&gt;3&lt;/td&gt;<br>				&lt;td&gt;wangwu&lt;/td&gt;<br>				&lt;td&gt;12312421&lt;/td&gt;<br>			&lt;/tr&gt;<br>			<br>			<br>		&lt;/table&gt;<br>		<br>		&lt;script type=&quot;text/javascript&quot;&gt;<br>			$(function()&#123;<br>				$(&quot;#selectAll&quot;).click(function()&#123;<br>					//attr(); ----&gt;prop();<br>					//alert($(this).attr(&quot;checked&quot;));<br>					//alert($(this).prop(&quot;checked&quot;));<br>					if($(this).prop(&quot;checked&quot;))&#123;<br>						$(&quot;.sel&quot;).prop(&quot;checked&quot;,true);<br>					&#125;else&#123;<br>						$(&quot;.sel&quot;).prop(&quot;checked&quot;,false);<br>					&#125;<br>				&#125;);<br>			&#125;);<br>			<br>		&lt;/script&gt;<br>	&lt;/body&gt;<br>&lt;/html&gt;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h5 id="5-3-添加元素"><a href="#5-3-添加元素" class="headerlink" title="5.3 添加元素"></a>5.3 添加元素</h5><p><strong>添加新的 HTML 内容</strong></p>
+<p>我们将学习用于添加新内容的四个 jQuery 方法：</p>
+<ul>
+<li>append() - 在被选元素的结尾插入内容</li>
+<li>prepend() - 在被选元素的开头插入内容</li>
+<li>after() - 在被选元素之后插入内容</li>
+<li>before() - 在被选元素之前插入内容</li>
+</ul>
+<p><strong>jQuery append() 方法</strong></p>
+<p>jQuery append() 方法在被选元素的结尾插入内容。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">append</span>(<span class="hljs-string">&quot;追加文本&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p><strong>jQuery prepend() 方法</strong></p>
+<p>jQuery prepend() 方法在被选元素的开头插入内容。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">prepend</span>(<span class="hljs-string">&quot;在开头追加文本&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p><strong>通过 append() 和 prepend() 方法添加若干新元素</strong></p>
+<p>在上面的例子中，我们只在被选元素的开头/结尾插入文本/HTML。</p>
+<p>不过，append() 和 prepend() 方法能够通过参数接收无限数量的新元素。可以通过 jQuery 来生成文本/HTML（就像上面的例子那样），或者通过 JavaScript 代码和 DOM 元素。</p>
+<p>在下面的例子中，我们创建若干个新元素。这些元素可以通过 text/HTML、jQuery 或者 JavaScript/DOM 来创建。然后我们通过 append() 方法把这些新元素追加到文本中（对 prepend() 同样有效）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">appendText</span>(<span class="hljs-params"></span>)<br>&#123;<br>    <span class="hljs-keyword">var</span> txt1=<span class="hljs-string">&quot;&lt;p&gt;文本。&lt;/p&gt;&quot;</span>;              <span class="hljs-comment">// 使用 HTML 标签创建文本</span><br>    <span class="hljs-keyword">var</span> txt2=$(<span class="hljs-string">&quot;&lt;p&gt;&lt;/p&gt;&quot;</span>).<span class="hljs-title function_">text</span>(<span class="hljs-string">&quot;文本。&quot;</span>);  <span class="hljs-comment">// 使用 jQuery 创建文本</span><br>    <span class="hljs-keyword">var</span> txt3=<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;p&quot;</span>);<br>    txt3.<span class="hljs-property">innerHTML</span>=<span class="hljs-string">&quot;文本。&quot;</span>;               <span class="hljs-comment">// 使用 DOM 创建文本 text with DOM</span><br>    $(<span class="hljs-string">&quot;body&quot;</span>).<span class="hljs-title function_">append</span>(txt1,txt2,txt3);        <span class="hljs-comment">// 追加新元素</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>jQuery after() 和 before() 方法</strong></p>
+<p>jQuery after() 方法在被选元素之后插入内容。</p>
+<p>jQuery before() 方法在被选元素之前插入内容。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;img&quot;</span>).<span class="hljs-title function_">after</span>(<span class="hljs-string">&quot;在后面添加文本&quot;</span>);<br> <br>$(<span class="hljs-string">&quot;img&quot;</span>).<span class="hljs-title function_">before</span>(<span class="hljs-string">&quot;在前面添加文本&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p><strong>通过 after() 和 before() 方法添加若干新元素</strong></p>
+<p>after() 和 before() 方法能够通过参数接收无限数量的新元素。可以通过 text/HTML、jQuery 或者 JavaScript/DOM 来创建新元素。</p>
+<p>在下面的例子中，我们创建若干新元素。这些元素可以通过 text/HTML、jQuery 或者 JavaScript/DOM 来创建。然后我们通过 after() 方法把这些新元素插到文本中（对 before() 同样有效）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">afterText</span>(<span class="hljs-params"></span>)<br>&#123;<br>    <span class="hljs-keyword">var</span> txt1=<span class="hljs-string">&quot;&lt;b&gt;I &lt;/b&gt;&quot;</span>;                    <span class="hljs-comment">// 使用 HTML 创建元素</span><br>    <span class="hljs-keyword">var</span> txt2=$(<span class="hljs-string">&quot;&lt;i&gt;&lt;/i&gt;&quot;</span>).<span class="hljs-title function_">text</span>(<span class="hljs-string">&quot;love &quot;</span>);     <span class="hljs-comment">// 使用 jQuery 创建元素</span><br>    <span class="hljs-keyword">var</span> txt3=<span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;big&quot;</span>);  <span class="hljs-comment">// 使用 DOM 创建元素</span><br>    txt3.<span class="hljs-property">innerHTML</span>=<span class="hljs-string">&quot;jQuery!&quot;</span>;<br>    $(<span class="hljs-string">&quot;img&quot;</span>).<span class="hljs-title function_">after</span>(txt1,txt2,txt3);          <span class="hljs-comment">// 在图片后添加文本</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="5-4-删除元素"><a href="#5-4-删除元素" class="headerlink" title="5.4 删除元素"></a>5.4 删除元素</h5><p><strong>删除元素/内容</strong></p>
+<p>如需删除元素和内容，一般可使用以下两个 jQuery 方法：</p>
+<ul>
+<li>remove() - 删除被选元素（及其子元素）</li>
+<li>empty() - 从被选元素中删除子元素</li>
+</ul>
+<p><strong>jQuery remove() 方法</strong></p>
+<p>jQuery remove() 方法删除被选元素及其子元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#div1&quot;</span>).<span class="hljs-title function_">remove</span>();<br></code></pre></td></tr></table></figure>
+
+<p><strong>jQuery empty() 方法</strong></p>
+<p>jQuery empty() 方法删除被选元素的子元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;#div1&quot;</span>).<span class="hljs-title function_">empty</span>();<br></code></pre></td></tr></table></figure>
+
+<p><strong>过滤被删除的元素</strong></p>
+<p>jQuery remove() 方法也可接受一个参数，允许您对被删元素进行过滤。</p>
+<p>该参数可以是任何 jQuery 选择器的语法。</p>
+<p>下面的例子删除 class="italic" 的所有 <p> 元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">remove</span>(<span class="hljs-string">&quot;.italic&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<h5 id="5-5数组或集合元素遍历"><a href="#5-5数组或集合元素遍历" class="headerlink" title="5.5数组或集合元素遍历"></a>5.5数组或集合元素遍历</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">each</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">i,n</span>)&#123;<br>  	<span class="hljs-title function_">alert</span>(i+<span class="hljs-string">&quot;....&quot;</span>+n);<br>&#125;);<br>或<br>$.<span class="hljs-title function_">each</span>(arr,<span class="hljs-keyword">function</span>(<span class="hljs-params">i,n</span>)&#123;<br>    <span class="hljs-title function_">alert</span>(i+<span class="hljs-string">&quot;....&quot;</span>+n);<br>&#125;)<br></code></pre></td></tr></table></figure>
+
+<h5 id="5-6-CSS类"><a href="#5-6-CSS类" class="headerlink" title="5.6 CSS类"></a>5.6 CSS类</h5><p><strong>jQuery 操作 CSS</strong></p>
+<p>jQuery 拥有若干进行 CSS 操作的方法。我们将学习下面这些：</p>
+<ul>
+<li>addClass() - 向被选元素添加一个或多个类</li>
+<li>removeClass() - 从被选元素删除一个或多个类</li>
+<li>toggleClass() - 对被选元素进行添加/删除类的切换操作</li>
+<li>css() - 设置或返回样式属性</li>
+</ul>
+<p><strong>实例样式表</strong></p>
+<p>下面的样式表将用于本页的所有例子：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.important</span><br>&#123;<br>        <span class="hljs-attribute">font-weight</span>:bold;<br>        <span class="hljs-attribute">font-size</span>:xx-large;<br>&#125;<br> <br><span class="hljs-selector-class">.blue</span><br>&#123;<br>        <span class="hljs-attribute">color</span>:blue;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>jQuery addClass() 方法</strong></p>
+<p>下面的例子展示如何向不同的元素添加 class 属性。当然，在添加类时，您也可以选取多个元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;h1,h2,p&quot;</span>).<span class="hljs-title function_">addClass</span>(<span class="hljs-string">&quot;blue&quot;</span>);<br>  $(<span class="hljs-string">&quot;div&quot;</span>).<span class="hljs-title function_">addClass</span>(<span class="hljs-string">&quot;important&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>您也可以在 addClass() 方法中规定多个类：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;body div:first&quot;</span>).<span class="hljs-title function_">addClass</span>(<span class="hljs-string">&quot;important blue&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p><strong>jQuery removeClass() 方法</strong></p>
+<p>下面的例子演示如何在不同的元素中删除指定的 class 属性：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;h1,h2,p&quot;</span>).<span class="hljs-title function_">removeClass</span>(<span class="hljs-string">&quot;blue&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p><strong>jQuery toggleClass() 方法</strong></p>
+<p>下面的例子将展示如何使用 jQuery toggleClass() 方法。该方法对被选元素进行添加/删除类的切换操作：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;button&quot;</span>).<span class="hljs-title function_">click</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;h1,h2,p&quot;</span>).<span class="hljs-title function_">toggleClass</span>(<span class="hljs-string">&quot;blue&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h5 id="5-7-CSS-方法"><a href="#5-7-CSS-方法" class="headerlink" title="5.7 CSS()方法"></a>5.7 CSS()方法</h5><p><strong>jQuery css() 方法</strong></p>
+<p>css() 方法设置或返回被选元素的一个或多个样式属性。</p>
+<p><strong>返回 CSS 属性</strong></p>
+<p>如需返回指定的 CSS 属性的值，请使用如下语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;propertyname&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p>下面的例子将返回首个匹配元素的 background-color 值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;background-color&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p><strong>设置 CSS 属性</strong></p>
+<p>如需设置指定的 CSS 属性，请使用如下语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;propertyname&quot;</span>,<span class="hljs-string">&quot;value&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p>下面的例子将为所有匹配元素设置 background-color 值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">css</span>(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;yellow&quot;</span>);<br></code></pre></td></tr></table></figure>
+
+<p><strong>设置多个 CSS 属性</strong></p>
+<p>如需设置多个 CSS 属性，请使用如下语法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-title function_">css</span>(&#123;<span class="hljs-string">&quot;propertyname&quot;</span>:<span class="hljs-string">&quot;value&quot;</span>,<span class="hljs-string">&quot;propertyname&quot;</span>:<span class="hljs-string">&quot;value&quot;</span>,...&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>下面的例子将为所有匹配元素设置 background-color 和 font-size：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-string">&quot;p&quot;</span>).<span class="hljs-title function_">css</span>(&#123;<span class="hljs-string">&quot;background-color&quot;</span>:<span class="hljs-string">&quot;yellow&quot;</span>,<span class="hljs-string">&quot;font-size&quot;</span>:<span class="hljs-string">&quot;200%&quot;</span>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>案例演示；省市级联</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs javascript">&lt;script&gt;<br>	$(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>		<span class="hljs-comment">//2.创建二维数组用于存储省份和城市</span><br>		<span class="hljs-keyword">var</span> cities = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-number">3</span>);<br>		cities[<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-string">&quot;武汉市&quot;</span>,<span class="hljs-string">&quot;黄冈市&quot;</span>,<span class="hljs-string">&quot;襄阳市&quot;</span>,<span class="hljs-string">&quot;荆州市&quot;</span>);<br>		cities[<span class="hljs-number">1</span>] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-string">&quot;长沙市&quot;</span>,<span class="hljs-string">&quot;郴州市&quot;</span>,<span class="hljs-string">&quot;株洲市&quot;</span>,<span class="hljs-string">&quot;岳阳市&quot;</span>);<br>		cities[<span class="hljs-number">2</span>] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-string">&quot;石家庄市&quot;</span>,<span class="hljs-string">&quot;邯郸市&quot;</span>,<span class="hljs-string">&quot;廊坊市&quot;</span>,<span class="hljs-string">&quot;保定市&quot;</span>);<br>		cities[<span class="hljs-number">3</span>] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(<span class="hljs-string">&quot;郑州市&quot;</span>,<span class="hljs-string">&quot;洛阳市&quot;</span>,<span class="hljs-string">&quot;开封市&quot;</span>,<span class="hljs-string">&quot;安阳市&quot;</span>);<br>		<br>		$(<span class="hljs-string">&quot;#province&quot;</span>).<span class="hljs-title function_">change</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>			<span class="hljs-comment">//10.清除第二个下拉列表的内容</span><br>			$(<span class="hljs-string">&quot;#city&quot;</span>).<span class="hljs-title function_">empty</span>();<br>			<br>			<span class="hljs-comment">//1.获取用户选择的省份</span><br>			<span class="hljs-keyword">var</span> val = <span class="hljs-variable language_">this</span>.<span class="hljs-property">value</span>;<br>			<span class="hljs-comment">//alert(val);</span><br>			<span class="hljs-comment">//3.遍历二维数组中的省份</span><br>			$.<span class="hljs-title function_">each</span>(cities,<span class="hljs-keyword">function</span>(<span class="hljs-params">i,n</span>)&#123;<br>				<span class="hljs-comment">//alert(i+&quot;:&quot;+n);</span><br>				<span class="hljs-comment">//4.判断用户选择的省份和遍历的省份</span><br>				<span class="hljs-keyword">if</span>(val==i)&#123;<br>					<span class="hljs-comment">//5.遍历该省份下的所有城市</span><br>					$.<span class="hljs-title function_">each</span>(cities[i], <span class="hljs-keyword">function</span>(<span class="hljs-params">j,m</span>) &#123;<br>						<span class="hljs-comment">//alert(m);</span><br>						<span class="hljs-comment">//6.创建城市文本节点</span><br>						<span class="hljs-keyword">var</span> textNode = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createTextNode</span>(m);<br>						<span class="hljs-comment">//7.创建option元素节点</span><br>						<span class="hljs-keyword">var</span> opEle = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">&quot;option&quot;</span>);<br>						<span class="hljs-comment">//8.将城市文本节点添加到option元素节点中去</span><br>						$(opEle).<span class="hljs-title function_">append</span>(textNode);<br>						<span class="hljs-comment">//9.将option元素节点追加到第二个下拉列表中去</span><br>						$(opEle).<span class="hljs-title function_">appendTo</span>($(<span class="hljs-string">&quot;#city&quot;</span>));<br>					&#125;);<br>				&#125;<br>			&#125;);<br>			<br>		&#125;);<br>	&#125;);<br>&lt;/script&gt;<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="第六节-jQuery遍历"><a href="#第六节-jQuery遍历" class="headerlink" title="第六节 jQuery遍历"></a>第六节 jQuery遍历</h4><h5 id="6-1-遍历"><a href="#6-1-遍历" class="headerlink" title="6.1 遍历"></a>6.1 遍历</h5><p>jQuery 遍历，意为"移动"，用于根据其相对于其他元素的关系来"查找"（或选取）HTML 元素。以某项选择开始，并沿着这个选择移动，直到抵达您期望的元素为止。</p>
+<p>下图展示了一个家族树。通过 jQuery 遍历，您能够从被选（当前的）元素开始，轻松地在家族树中向上移动（祖先），向下移动（子孙），水平移动（同胞）。这种移动被称为对 DOM 进行遍历。</p>
+<h5 id="6-2-祖先"><a href="#6-2-祖先" class="headerlink" title="6.2 祖先"></a>6.2 祖先</h5><p><strong>jQuery parent() 方法</strong></p>
+<p>parent() 方法返回被选元素的直接父元素。</p>
+<p>该方法只会向上一级对 DOM 树进行遍历。</p>
+<p>下面的例子返回每个 <span> 元素的的直接父元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;span&quot;</span>).<span class="hljs-title function_">parent</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h5 id="6-3-后代"><a href="#6-3-后代" class="headerlink" title="6.3 后代"></a>6.3 后代</h5><p><strong>jQuery children() 方法</strong></p>
+<p>children() 方法返回被选元素的所有直接子元素。</p>
+<p>该方法只会向下一级对 DOM 树进行遍历。</p>
+<p>下面的例子返回每个 <div> 元素的所有直接子元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;div&quot;</span>).<span class="hljs-title function_">children</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>您也可以使用可选参数来过滤对子元素的搜索。</p>
+<p>下面的例子返回类名为 "1" 的所有 <p> 元素，并且它们是 <div> 的直接子元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;div&quot;</span>).<span class="hljs-title function_">children</span>(<span class="hljs-string">&quot;p.1&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p><strong>jQuery find() 方法</strong></p>
+<p>find() 方法返回被选元素的后代元素，一路向下直到最后一个后代。</p>
+<p>下面的例子返回属于 <div> 后代的所有 <span> 元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;div&quot;</span>).<span class="hljs-title function_">find</span>(<span class="hljs-string">&quot;span&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>下面的例子返回 <div> 的所有后代：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;div&quot;</span>).<span class="hljs-title function_">find</span>(<span class="hljs-string">&quot;*&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<h5 id="6-4-同胞"><a href="#6-4-同胞" class="headerlink" title="6.4 同胞"></a>6.4 同胞</h5><p><strong>jQuery siblings() 方法</strong></p>
+<p>siblings() 方法返回被选元素的所有同胞元素。</p>
+<p>下面的例子返回 <h2> 的所有同胞元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;h2&quot;</span>).<span class="hljs-title function_">siblings</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p>您也可以使用可选参数来过滤对同胞元素的搜索。</p>
+<p>下面的例子返回属于 <h2> 的同胞元素的所有 <p> 元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;h2&quot;</span>).<span class="hljs-title function_">siblings</span>(<span class="hljs-string">&quot;p&quot;</span>);<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+<p><strong>jQuery next() 方法</strong></p>
+<p>next() 方法返回被选元素的下一个同胞元素。</p>
+<p>该方法只返回一个元素。</p>
+<p>下面的例子返回 <h2> 的下一个同胞元素：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript">$(<span class="hljs-variable language_">document</span>).<span class="hljs-title function_">ready</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)&#123;<br>  $(<span class="hljs-string">&quot;h2&quot;</span>).<span class="hljs-title function_">next</span>();<br>&#125;);<br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div></div>
+      <div>https://travonti.github.io/2022/10/10/JQuery/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>TravonTi</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年10月10日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/10/10/test/" title="test">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">test</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/10/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="" target="_blank" rel="nofollow noopener"><span>ZYH</span></a> <i class="iconfont icon-love"></i> <a href="" target="_blank" rel="nofollow noopener"><span>ZLJ</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      蜀ICP备2022023550号
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
