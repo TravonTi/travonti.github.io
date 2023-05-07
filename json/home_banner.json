@@ -1,0 +1,42 @@
+{
+    "code": 200,
+    "message": "ok",
+    "data": [
+        {
+            "itemType": 0,
+            "spanSize": 4,
+            "banners": [
+                {
+                    "imgUrl": "https://cn.bing.com/images/search?view=detailV2&ccid=PpZFMsmQ&id=E1DF980B8B00452C4C65326A0E6D3AC127CBEB35&thid=OIP.PpZFMsmQtK1OIp6YmWjsNwHaKy&mediaurl=https%3a%2f%2fpic.3gbizhi.com%2f2020%2f0801%2f20200801090653261.jpg&exph=1492&expw=1024&q=%e7%be%8e%e5%a5%b3%e5%9b%be%e7%89%87%e5%a4%a7%e5%85%a8&simid=608046191408196102&FORM=IRPRST&ck=A86C8B04B7EADDF4B9562D8A859D1022&selectedIndex=12",
+                    "dataTitle": "美女01",
+                    "dataContent": "腰身纤细，美丽动人，大眼睛少女睡衣短裙好看私房写真"
+                },
+                {
+                    "imgUrl": "https://ts1.cn.mm.bing.net/th/id/R-C.c84c1958715652b3c5199c91552da56a?rik=uCVKoiLiCSduKg&riu=http%3a%2f%2fpic.bizhi360.com%2fbbpic%2f46%2f9646_7.jpg&ehk=lmdpc2pT7J%2bL3G2sWx5HlaPr2zKelrqGngATgJW4lNY%3d&risl=&pid=ImgRaw&r=0",
+                    "dataTitle": "美女02",
+                    "dataContent": "高清运动有氧美女"
+                },
+                {
+                    "imgUrl": "https://ts1.cn.mm.bing.net/th/id/R-C.1e53617d0d88951a22836bed8b1959e1?rik=0XsHTU7h%2fb%2b8Bg&riu=http%3a%2f%2fimg.mm4000.com%2ffile%2f8%2f89%2f31eec45408.jpg&ehk=rL1V8UyUNyUWx3Rp9mGKkVFbgNdYUZmznqk33pMJB2o%3d&risl=&pid=ImgRaw&r=0",
+                    "dataTitle": "美女03",
+                    "dataContent": "丝袜长腿美女运动服性感撩人写真"
+                },
+                {
+                    "imgUrl": "https://tse2-mm.cn.bing.net/th/id/OIP-C.f7dsyASBViiHjRVxgGCVMwAAAA?pid=ImgDet&rs=1",
+                    "dataTitle": "美女04",
+                    "dataContent": "纯纯的感觉很清新，制服学生妹子可爱居家私房写真照"
+                }
+            ]
+        },
+        {
+            "itemType": 1,
+            "spanSize": 4,
+            "banners": []
+        },
+        {
+            "itemType": 3,
+            "spanSize": 4,
+            "banners": []
+        }
+    ]
+}
